@@ -5,26 +5,54 @@
             background-color: slategray;
             color: #FFFDD0;
             font-family: 'Courier New', Courier, monospace;
+            font-size-adjust: none;
+            white-space: nowrap
         }
-        #wrapper {
-            text-align: left;
-            padding-left: 5px;
-            max-width: 300px;
-            margin: auto;
+        #copyright {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            position: absolute;
+            bottom: 0;
         }
-        h1 {
-            font-size: 64px;
+
+       
+        /* Bigger than 600px wide */
+        @media screen and (min-width: 600px) {
+            #wrapper {
+                text-align: left;
+                padding-left: 5px;
+                max-width: 600px;
+                margin: auto;
+            }
+            h1 {
+                font-size: 5rem;
+            }
+            .link-wrapper {
+                margin-top: 0.2rem;
+                font-size: 4rem;
+            }
         }
-        a {
-            
+        /* Smaller than max width */
+        @media screen and (max-width: 600px) {
+            #wrapper {
+                text-align: left;
+                padding-left: 5px;
+            }
+            h1 {
+                font-size: 5rem;
+            }
+            .link-wrapper {
+                margin-top: 0.2rem;
+                font-size: 4rem;
+            }
         }
-        .link-wrapper {
-            margin-top: 1em;
-            font-size: 30px;
-        }
+        
     </style>
 </head>
 <body>
+    <div hidden>
+        Bro why are you stalking my code
+    </div>
     <div id="wrapper">
         <h1>
             hey :)
@@ -43,6 +71,13 @@
         </div>
         <div class="link-wrapper">
             <a href="https://open.spotify.com/user/ildalia">spotify</a>
+        </div>
+        <div id="copyright">
+            Copyright
+            <span id="copyright">
+                <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+            </span>
+            Thomas Fuller.
         </div>
     </div>
 </body>
